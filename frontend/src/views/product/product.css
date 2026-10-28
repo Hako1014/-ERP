@@ -1,0 +1,136 @@
+.product-page {
+  min-width: 0;
+}
+
+.product-toolbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.product-toolbar__filters,
+.product-toolbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.product-filter {
+  width: 150px;
+}
+
+.product-batch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: -2px 0 12px;
+  padding: 8px 10px;
+  border: 1px solid var(--el-color-primary-light-7);
+  border-radius: 6px;
+  background: var(--el-color-primary-light-9);
+  color: var(--el-text-color-regular);
+  font-size: 13px;
+}
+
+.product-thumb,
+.product-thumb__placeholder {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+}
+
+.product-thumb__placeholder {
+  display: grid;
+  place-items: center;
+  border: 1px dashed var(--el-border-color);
+  color: var(--el-text-color-placeholder);
+  font-size: 20px;
+}
+
+.combo-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.combo-item {
+  display: grid;
+  grid-template-columns: minmax(180px, 1.5fr) minmax(150px, 1fr) 120px 110px 48px;
+  gap: 8px;
+  align-items: start;
+}
+
+.combo-item__remove {
+  align-self: center;
+}
+
+.product-settings-split {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(360px, 1.2fr);
+  gap: 16px;
+}
+
+.product-settings-split__panel {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--el-border-color-lighter);
+  border-radius: 8px;
+  background: var(--el-bg-color);
+}
+
+.product-settings-split__panel h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.product-settings-list {
+  margin-top: 14px;
+}
+
+@media (max-width: 980px) {
+  .product-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .product-toolbar__actions {
+    justify-content: flex-end;
+  }
+
+  .combo-item {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .combo-item__remove {
+    justify-self: end;
+  }
+
+  .product-settings-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .product-toolbar__filters,
+  .product-toolbar__actions {
+    width: 100%;
+  }
+
+  .settings-page__search,
+  .product-filter {
+    width: 100%;
+  }
+
+  .combo-item {
+    grid-template-columns: 1fr;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--el-border-color-lighter);
+  }
+
+  .combo-item__remove {
+    justify-self: start;
+  }
+}

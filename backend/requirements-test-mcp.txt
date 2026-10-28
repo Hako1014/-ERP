@@ -1,0 +1,3 @@
+-r requirements.txt
+# 仅隔离Lua脚本测试使用，不是运行服务的依赖。
+fakeredis[lua]==2.32.1

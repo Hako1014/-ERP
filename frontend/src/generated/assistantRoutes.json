@@ -1,0 +1,572 @@
+{
+  "version": "sha256:e2d9cce45ed51e6c7fcfe79c65c97c9755cd17107baf2adf06e9033c0dc62b20",
+  "routes": [
+    {
+      "name": "approval",
+      "title": "协同办公",
+      "path": "/approval",
+      "permission": "module:approval",
+      "module": "approval",
+      "parent_path": null,
+      "is_leaf": false
+    },
+    {
+      "name": "approval-flows",
+      "title": "审批管理",
+      "path": "/approval/flows",
+      "permission": "approval:configure",
+      "module": "approval",
+      "parent_path": "/approval",
+      "is_leaf": true
+    },
+    {
+      "name": "approval-mine",
+      "title": "我的审批",
+      "path": "/approval/mine",
+      "permission": "module:approval",
+      "module": "approval",
+      "parent_path": "/approval",
+      "is_leaf": true
+    },
+    {
+      "name": "assistant",
+      "title": "AI 助手",
+      "path": "/assistant",
+      "permission": "module:dashboard",
+      "module": "dashboard",
+      "parent_path": null,
+      "is_leaf": true
+    },
+    {
+      "name": "dashboard",
+      "title": "首页看板",
+      "path": "/dashboard",
+      "permission": "module:dashboard",
+      "module": "dashboard",
+      "parent_path": null,
+      "is_leaf": true
+    },
+    {
+      "name": "finance",
+      "title": "财务管理",
+      "path": "/finance",
+      "permission": "module:finance",
+      "module": "finance",
+      "parent_path": null,
+      "is_leaf": false
+    },
+    {
+      "name": "finance-expenses",
+      "title": "费用单",
+      "path": "/finance/expenses",
+      "permission": "module:finance",
+      "module": "finance",
+      "parent_path": "/finance",
+      "is_leaf": true
+    },
+    {
+      "name": "finance-incomes",
+      "title": "收入单",
+      "path": "/finance/incomes",
+      "permission": "module:finance",
+      "module": "finance",
+      "parent_path": "/finance",
+      "is_leaf": true
+    },
+    {
+      "name": "finance-invoices",
+      "title": "发票管理",
+      "path": "/finance/invoices",
+      "permission": "module:finance",
+      "module": "finance",
+      "parent_path": "/finance",
+      "is_leaf": true
+    },
+    {
+      "name": "finance-payments",
+      "title": "付款单",
+      "path": "/finance/payments",
+      "permission": "module:finance",
+      "module": "finance",
+      "parent_path": "/finance",
+      "is_leaf": true
+    },
+    {
+      "name": "finance-project-categories",
+      "title": "项目核算类别",
+      "path": "/finance/project-categories",
+      "permission": "module:finance",
+      "module": "finance",
+      "parent_path": "/finance",
+      "is_leaf": true
+    },
+    {
+      "name": "finance-receipts",
+      "title": "收款单",
+      "path": "/finance/receipts",
+      "permission": "module:finance",
+      "module": "finance",
+      "parent_path": "/finance",
+      "is_leaf": true
+    },
+    {
+      "name": "finance-settlements",
+      "title": "结算单",
+      "path": "/finance/settlements",
+      "permission": "module:finance",
+      "module": "finance",
+      "parent_path": "/finance",
+      "is_leaf": true
+    },
+    {
+      "name": "finance-subjects",
+      "title": "会计科目",
+      "path": "/finance/subjects",
+      "permission": "module:finance",
+      "module": "finance",
+      "parent_path": "/finance",
+      "is_leaf": true
+    },
+    {
+      "name": "finance-supplier-balances",
+      "title": "供应商账户余额",
+      "path": "/finance/supplier-balances",
+      "permission": "module:finance",
+      "module": "finance",
+      "parent_path": "/finance",
+      "is_leaf": true
+    },
+    {
+      "name": "finance-vouchers",
+      "title": "凭证管理",
+      "path": "/finance/vouchers",
+      "permission": "module:finance",
+      "module": "finance",
+      "parent_path": "/finance",
+      "is_leaf": true
+    },
+    {
+      "name": "orders",
+      "title": "订单管理",
+      "path": "/orders",
+      "permission": "module:order",
+      "module": "order",
+      "parent_path": null,
+      "is_leaf": false
+    },
+    {
+      "name": "order-done",
+      "title": "已完成订单",
+      "path": "/orders/done",
+      "permission": "module:order",
+      "module": "order",
+      "parent_path": "/orders",
+      "is_leaf": true
+    },
+    {
+      "name": "order-new",
+      "title": "新订单",
+      "path": "/orders/new",
+      "permission": "module:order",
+      "module": "order",
+      "parent_path": "/orders",
+      "is_leaf": true
+    },
+    {
+      "name": "order-pending",
+      "title": "待处理订单",
+      "path": "/orders/pending",
+      "permission": "module:order",
+      "module": "order",
+      "parent_path": "/orders",
+      "is_leaf": true
+    },
+    {
+      "name": "order-print",
+      "title": "待打印订单",
+      "path": "/orders/print",
+      "permission": "module:order",
+      "module": "order",
+      "parent_path": "/orders",
+      "is_leaf": true
+    },
+    {
+      "name": "order-print-workbench",
+      "title": "订单打印",
+      "path": "/orders/print-workbench",
+      "permission": "module:order",
+      "module": "order",
+      "parent_path": "/orders",
+      "is_leaf": true
+    },
+    {
+      "name": "order-process",
+      "title": "订单处理",
+      "path": "/orders/process",
+      "permission": "module:order",
+      "module": "order",
+      "parent_path": "/orders",
+      "is_leaf": true
+    },
+    {
+      "name": "order-returns",
+      "title": "直营退货订单",
+      "path": "/orders/returns",
+      "permission": "module:order",
+      "module": "order",
+      "parent_path": "/orders",
+      "is_leaf": true
+    },
+    {
+      "name": "order-scan-shipment",
+      "title": "扫描发货",
+      "path": "/orders/scan-shipment",
+      "permission": "module:order",
+      "module": "order",
+      "parent_path": "/orders",
+      "is_leaf": true
+    },
+    {
+      "name": "order-settings",
+      "title": "订单设置",
+      "path": "/orders/settings",
+      "permission": "module:order",
+      "module": "order",
+      "parent_path": "/orders",
+      "is_leaf": true
+    },
+    {
+      "name": "order-ship",
+      "title": "待发货订单",
+      "path": "/orders/ship",
+      "permission": "module:order",
+      "module": "order",
+      "parent_path": "/orders",
+      "is_leaf": true
+    },
+    {
+      "name": "order-shipped",
+      "title": "已发货订单",
+      "path": "/orders/shipped",
+      "permission": "module:order",
+      "module": "order",
+      "parent_path": "/orders",
+      "is_leaf": true
+    },
+    {
+      "name": "order-waves",
+      "title": "波次管理",
+      "path": "/orders/waves",
+      "permission": "module:order",
+      "module": "order",
+      "parent_path": "/orders",
+      "is_leaf": true
+    },
+    {
+      "name": "products",
+      "title": "商品管理",
+      "path": "/products",
+      "permission": "module:product",
+      "module": "product",
+      "parent_path": null,
+      "is_leaf": false
+    },
+    {
+      "name": "product-combos",
+      "title": "组合商品列表",
+      "path": "/products/combos",
+      "permission": "module:product",
+      "module": "product",
+      "parent_path": "/products",
+      "is_leaf": true
+    },
+    {
+      "name": "product-list",
+      "title": "商品资料",
+      "path": "/products/list",
+      "permission": "module:product",
+      "module": "product",
+      "parent_path": "/products",
+      "is_leaf": true
+    },
+    {
+      "name": "purchase",
+      "title": "采购管理",
+      "path": "/purchase",
+      "permission": "module:purchase",
+      "module": "purchase",
+      "parent_path": null,
+      "is_leaf": false
+    },
+    {
+      "name": "purchase-incomes",
+      "title": "收入单管理",
+      "path": "/purchase/incomes",
+      "permission": "module:purchase",
+      "module": "purchase",
+      "parent_path": "/purchase",
+      "is_leaf": true
+    },
+    {
+      "name": "purchase-invoices",
+      "title": "采购发票",
+      "path": "/purchase/invoices",
+      "permission": "module:purchase",
+      "module": "purchase",
+      "parent_path": "/purchase",
+      "is_leaf": true
+    },
+    {
+      "name": "purchase-orders",
+      "title": "采购订单",
+      "path": "/purchase/orders",
+      "permission": "module:purchase",
+      "module": "purchase",
+      "parent_path": "/purchase",
+      "is_leaf": true
+    },
+    {
+      "name": "purchase-payments",
+      "title": "采购付款单",
+      "path": "/purchase/payments",
+      "permission": "module:finance",
+      "module": "finance",
+      "parent_path": "/purchase",
+      "is_leaf": true
+    },
+    {
+      "name": "purchase-plans",
+      "title": "采购计划",
+      "path": "/purchase/plans",
+      "permission": "module:purchase",
+      "module": "purchase",
+      "parent_path": "/purchase",
+      "is_leaf": true
+    },
+    {
+      "name": "purchase-prepays",
+      "title": "采购预付款",
+      "path": "/purchase/prepays",
+      "permission": "module:purchase",
+      "module": "purchase",
+      "parent_path": "/purchase",
+      "is_leaf": true
+    },
+    {
+      "name": "purchase-reports",
+      "title": "采购报表",
+      "path": "/purchase/reports",
+      "permission": "module:purchase",
+      "module": "purchase",
+      "parent_path": "/purchase",
+      "is_leaf": true
+    },
+    {
+      "name": "purchase-returns",
+      "title": "采购退货单",
+      "path": "/purchase/returns",
+      "permission": "module:purchase",
+      "module": "purchase",
+      "parent_path": "/purchase",
+      "is_leaf": true
+    },
+    {
+      "name": "settings",
+      "title": "基础设置",
+      "path": "/settings",
+      "permission": "module:settings",
+      "module": "settings",
+      "parent_path": null,
+      "is_leaf": false
+    },
+    {
+      "name": "settings-company",
+      "title": "公司设置",
+      "path": "/settings/company",
+      "permission": "module:settings",
+      "module": "settings",
+      "parent_path": "/settings",
+      "is_leaf": true
+    },
+    {
+      "name": "settings-customers",
+      "title": "客户管理",
+      "path": "/settings/customers",
+      "permission": "module:settings",
+      "module": "settings",
+      "parent_path": "/settings",
+      "is_leaf": true
+    },
+    {
+      "name": "settings-logistics",
+      "title": "物流工具",
+      "path": "/settings/logistics",
+      "permission": "module:settings",
+      "module": "settings",
+      "parent_path": "/settings",
+      "is_leaf": true
+    },
+    {
+      "name": "settings-product",
+      "title": "商品设置",
+      "path": "/settings/product",
+      "permission": "module:settings",
+      "module": "settings",
+      "parent_path": "/settings",
+      "is_leaf": true
+    },
+    {
+      "name": "settings-shops",
+      "title": "店铺对接",
+      "path": "/settings/shops",
+      "permission": "module:settings",
+      "module": "settings",
+      "parent_path": "/settings",
+      "is_leaf": true
+    },
+    {
+      "name": "settings-suppliers",
+      "title": "供应商管理",
+      "path": "/settings/suppliers",
+      "permission": "module:settings",
+      "module": "settings",
+      "parent_path": "/settings",
+      "is_leaf": true
+    },
+    {
+      "name": "stock",
+      "title": "库存管理",
+      "path": "/stock",
+      "permission": "module:stock",
+      "module": "stock",
+      "parent_path": null,
+      "is_leaf": false
+    },
+    {
+      "name": "stock-adjustments",
+      "title": "库存调整单",
+      "path": "/stock/adjustments",
+      "permission": "module:stock",
+      "module": "stock",
+      "parent_path": "/stock",
+      "is_leaf": true
+    },
+    {
+      "name": "stock-check",
+      "title": "库存盘点",
+      "path": "/stock/check",
+      "permission": "module:stock",
+      "module": "stock",
+      "parent_path": "/stock",
+      "is_leaf": true
+    },
+    {
+      "name": "stock-costs",
+      "title": "库存成本",
+      "path": "/stock/costs",
+      "permission": "module:stock",
+      "module": "stock",
+      "parent_path": "/stock",
+      "is_leaf": true
+    },
+    {
+      "name": "stock-flows",
+      "title": "出入库查询",
+      "path": "/stock/flows",
+      "permission": "module:stock",
+      "module": "stock",
+      "parent_path": "/stock",
+      "is_leaf": true
+    },
+    {
+      "name": "stock-inbound",
+      "title": "采购入库",
+      "path": "/stock/inbound",
+      "permission": "module:stock",
+      "module": "stock",
+      "parent_path": "/stock",
+      "is_leaf": true
+    },
+    {
+      "name": "stock-locations",
+      "title": "库位管理",
+      "path": "/stock/locations",
+      "permission": "module:stock",
+      "module": "stock",
+      "parent_path": "/stock",
+      "is_leaf": true
+    },
+    {
+      "name": "stock-options",
+      "title": "库存功能选项",
+      "path": "/stock/options",
+      "permission": "module:stock",
+      "module": "stock",
+      "parent_path": "/stock",
+      "is_leaf": true
+    },
+    {
+      "name": "stock-purchase-out",
+      "title": "采购出库",
+      "path": "/stock/purchase-out",
+      "permission": "module:stock",
+      "module": "stock",
+      "parent_path": "/stock",
+      "is_leaf": true
+    },
+    {
+      "name": "stock-query",
+      "title": "库存查询",
+      "path": "/stock/query",
+      "permission": "module:stock",
+      "module": "stock",
+      "parent_path": "/stock",
+      "is_leaf": true
+    },
+    {
+      "name": "stock-settlement",
+      "title": "库存结存",
+      "path": "/stock/settlement",
+      "permission": "module:stock",
+      "module": "stock",
+      "parent_path": "/stock",
+      "is_leaf": true
+    },
+    {
+      "name": "stock-shop",
+      "title": "店铺库存设置",
+      "path": "/stock/shop-stock",
+      "permission": "module:stock",
+      "module": "stock",
+      "parent_path": "/stock",
+      "is_leaf": true
+    },
+    {
+      "name": "stock-transfers",
+      "title": "调拨管理",
+      "path": "/stock/transfers",
+      "permission": "module:stock",
+      "module": "stock",
+      "parent_path": "/stock",
+      "is_leaf": true
+    },
+    {
+      "name": "stock-warehouses",
+      "title": "仓库管理",
+      "path": "/stock/warehouses",
+      "permission": "module:stock",
+      "module": "stock",
+      "parent_path": "/stock",
+      "is_leaf": true
+    },
+    {
+      "name": "stock-warnings",
+      "title": "库存预警",
+      "path": "/stock/warnings",
+      "permission": "module:stock",
+      "module": "stock",
+      "parent_path": "/stock",
+      "is_leaf": true
+    }
+  ]
+}

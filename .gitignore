@@ -1,0 +1,83 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env
+deploy/.env
+deploy/backups/
+.pytest_cache/
+.coverage
+htmlcov/
+uploads/
+private_uploads/
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+.vite-cache/
+test-results/
+playwright-report/
+
+# IDE / OS
+.idea/
+.vscode/
+
+# 本地 AI 助手工作记录（含项目上下文笔记，不入版本控制）
+.workbuddy-ai/
+.dumate/
+.probe/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docker volumes
+.mysql-data/
+.redis-data/
+
+# 本地 E2E 账号包含明文测试口令，不纳入版本控制
+/docs/角色账号/
+
+# 本地通知验收运行日志、beat 检查点与浏览器输出不提交
+/docs/验收记录/task094-*.log
+/docs/验收记录/task094-beat-schedule*
+/docs/验收记录/task094-playwright*/
+/docs/验收记录/task094-generated-before/
+
+# 本机环境变量与凭据
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# 项目文档留在本地，不上传到 GitHub
+/docs/
+*.md
+!README.md
+*.mdx
+*.rst
+*.adoc
+*.doc
+*.docx
+*.pdf
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+
+# 本地构建产物、测试数据与临时文件
+/artifacts/
+/resume_*_qa/
+/.test-tmp*/
+/.uv-cache/
+*.log
+*.sqlite
+*.sqlite3
+*.db
+~$*
