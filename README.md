@@ -12,7 +12,7 @@
 ```text
 backend/   后端（FastAPI）
 frontend/  前端（Vue 3）
-docs/      需求、路线图与任务卡
+docs/      需求、路线图
 scripts/   文档与工具脚本
 ```
 
