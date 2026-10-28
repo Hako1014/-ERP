@@ -71,15 +71,6 @@ desktop.ini
 *.ppt
 *.pptx
 
-# 本次指定上传的文档
-!/docs/
-/docs/*
-!/docs/API-使用说明.md
-!/docs/openapi.json
-!/docs/用户手册.md
-!/docs/运维手册.md
-!/docs/遗留项与二期清单.md
-
 # 本地构建产物、测试数据与临时文件
 /artifacts/
 /resume_*_qa/
