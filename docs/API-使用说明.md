@@ -1,6 +1,6 @@
 # API 使用说明
 
-本说明与 `docs/openapi.json` 对应。OpenAPI 3.1 文档由当前 FastAPI 路由生成，包含 360 条路径、516 个操作（TASK-097 更新）；字段、参数、响应模型和接口分组以该 JSON 为准，不在此手工重复维护。
+本说明与 `docs/openapi.json` 对应。OpenAPI 3.1 文档由当前 FastAPI 路由生成，包含 360 条路径、516 个操作；字段、参数、响应模型和接口分组以该 JSON 为准，不在此手工重复维护。
 
 ## 查看与更新
 
@@ -12,7 +12,7 @@
 
 ### MCP 个人查询凭据
 
-现有登录 JWT 下使用 `POST /mcp/credentials` 签发、`GET /mcp/credentials` 列出本人元数据、`POST /mcp/credentials/{credential_id}/revoke` 撤销。明文令牌仅签发时显示一次，stdio进程通过 `ERP_MCP_TOKEN` 注入；不将该令牌当作ERP登录JWT。当前只提供 `erp_get_my_access`；详情见[TASK-097验收与使用说明](TASK-097-MCP基础服务验收.md)。本机MySQL还未执行0026，部署前必须按授权应用迁移，不能仅凭OpenAPI更新认定运行环境已升级。
+现有登录 JWT 下使用 `POST /mcp/credentials` 签发、`GET /mcp/credentials` 列出本人元数据、`POST /mcp/credentials/{credential_id}/revoke` 撤销。明文令牌仅签发时显示一次，stdio进程通过 `ERP_MCP_TOKEN` 注入；不将该令牌当作ERP登录JWT。当前只提供 `erp_get_my_access`；详情见[TASK-097验收与使用说明]。本机MySQL还未执行0026，部署前必须按授权应用迁移，不能仅凭OpenAPI更新认定运行环境已升级。
 
 - 本地后端基地址：`http://127.0.0.1:8000`；部署栈通过前端域名访问时基路径为 `/api`，nginx 会去除该前缀再转发。
 - `POST /auth/login` 使用账号或手机号及密码登录，返回的 JWT 用 `Authorization: Bearer <token>` 传递。菜单和功能权限可由 `GET /auth/me/permissions` 查询。接口按角色权限、数据范围和公司 IP 策略校验；403 不应通过更换 ID 重试绕过。
@@ -24,7 +24,7 @@
 - 先以当前登录 JWT 调用 `POST /assistant/sessions` 创建会话，再调用 `POST /assistant/messages/stream` 接收 Server-Sent Events；流式响应不是通用 `Result` 包装。退出、切换账号或新建会话时应清除旧消息并取消未完成请求。
 - 会话版本、身份和数据范围由服务端校验。仅发送当前问题及必要的会话历史；不要在请求中伪造角色、员工/公司 ID、权限或系统消息。业务查询仅限固定只读工具和当前用户可见范围，来源按事件返回。
 - 取消生成时中止客户端流；调用不会自动重试。助手回答不是业务写入凭证；首版不提供快捷录单或审核、付款、发货等写操作。
-- 接口字段和错误码以 `docs/openapi.json` 及 [AI 助手接口契约](角色AI助手-接口契约.md) 为准。OpenAPI 快照更新命令见本节“查看与更新”。
+- 接口字段和错误码以 `docs/openapi.json` 及 [AI 助手接口契约] 为准。OpenAPI 快照更新命令见本节“查看与更新”。
 
 示例（仅演示请求格式，不包含真实账号或密钥）：
 
