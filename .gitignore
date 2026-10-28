@@ -56,7 +56,7 @@ desktop.ini
 *.p12
 *.pfx
 
-# 项目文档留在本地，不上传到 GitHub
+# 默认排除文档；按需只放行指定的入口文档
 /docs/
 *.md
 !README.md
@@ -70,6 +70,15 @@ desktop.ini
 *.xlsx
 *.ppt
 *.pptx
+
+# 本次指定上传的文档
+!/docs/
+/docs/*
+!/docs/API-使用说明.md
+!/docs/openapi.json
+!/docs/用户手册.md
+!/docs/运维手册.md
+!/docs/遗留项与二期清单.md
 
 # 本地构建产物、测试数据与临时文件
 /artifacts/
